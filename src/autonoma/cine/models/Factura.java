@@ -4,6 +4,8 @@
  */
 package autonoma.cine.models;
 
+import java.util.ArrayList;
+
 /**
  * Reoresentar la factura del cine
  * contiene un ArrayList de venta
@@ -16,7 +18,33 @@ public class Factura {
     /**
      * Lista de ventas de poleteria.
      */
-    private ArrayList<Venta>
-    
+    private ArrayList<Venta>ventas;
+
     private double total;
+    Venta venta;
+    public Factura(ArrayList<Venta> ventas, double total) {
+        this.ventas = ventas;
+        this.total = total;
+    }
+
+    public ArrayList<Venta> getVentas() {
+        return ventas;
+    }
+
+    public void setVentas(ArrayList<Venta> ventas) {
+        this.ventas = ventas;
+    }
+
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
+    }
+    public String toString() {
+        return "Factura\n" + 
+               "Número de boletos: " + venta.getBoletas().size() + "\n" + 
+               "Total: $" + total;
+    }
 }
