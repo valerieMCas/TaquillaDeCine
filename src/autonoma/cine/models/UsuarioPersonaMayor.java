@@ -1,4 +1,4 @@
-package autonoma.cine.main;
+package autonoma.cine.models;
 
 /**
  * Representa a un usuario de tipo Persona Mayor en el sistema del cine.
@@ -7,13 +7,13 @@ package autonoma.cine.main;
  * @version 1.0.0
  * @since 2025-04-03
  */
-public class PersonaMayor extends Usuario{
+public class UsuarioPersonaMayor extends Usuario{
     
     /**
     * Constructor de Persona Mayor.
     * Inicializa el descuento en 1000, ya que este es su descuento.
     */
-    public PersonaMayor(){
+    public UsuarioPersonaMayor(){
         this.descuento = 1000;
     }
     

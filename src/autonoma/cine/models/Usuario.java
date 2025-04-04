@@ -1,4 +1,4 @@
-package autonoma.cine.main;
+package autonoma.cine.models;
 
 /**
  * Clase abstracta que representa un usuario en el sistema del cine.

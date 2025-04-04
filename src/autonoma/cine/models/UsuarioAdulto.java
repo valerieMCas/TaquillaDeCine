@@ -1,4 +1,4 @@
-package autonoma.cine.main;
+package autonoma.cine.models;
 
 /**
  * Representa a un usuario de tipo Adulto en el sistema del cine.
@@ -7,13 +7,13 @@ package autonoma.cine.main;
  * @version 1.0.0
  * @since 2025-04-03
  */
-public class Adulto extends Usuario{
+public class UsuarioAdulto extends Usuario{
 
     /**
     * Constructor de Adulto.
     * Inicializa el descuento en 0, ya que este es su descuento.
     */
-    public Adulto() {
+    public UsuarioAdulto() {
         this.descuento = 0;
     }
 
