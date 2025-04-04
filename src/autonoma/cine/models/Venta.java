@@ -19,7 +19,7 @@ public class Venta {
     * constructor
     */
     public Venta(ArrayList<Boleta> bolateas) {
-        this.boletas = bolateas;
+        this.boletas = boletas;
     }
     /*
     * metodos de acepso

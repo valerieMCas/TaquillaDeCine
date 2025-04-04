@@ -15,33 +15,23 @@ import java.util.ArrayList;
  *
  */
 public class Factura {
-    /**
-     * Lista de ventas de poleteria.
-     */
-    private ArrayList<Venta>ventas;
-
+    private Venta venta;
     private double total;
-    Venta venta;
-    public Factura(ArrayList<Venta> ventas, double total) {
-        this.ventas = ventas;
-        this.total = total;
+
+    public Factura(Venta venta) {
+        this.venta = venta;
+        this.total = venta.calcularTotal();  // Calcula el total al crear la factura
     }
 
-    public ArrayList<Venta> getVentas() {
-        return ventas;
-    }
-
-    public void setVentas(ArrayList<Venta> ventas) {
-        this.ventas = ventas;
+    public Venta getVenta() {
+        return venta;
     }
 
     public double getTotal() {
         return total;
     }
 
-    public void setTotal(double total) {
-        this.total = total;
-    }
+    @Override
     public String toString() {
         return "Factura\n" + 
                "Número de boletos: " + venta.getBoletas().size() + "\n" + 

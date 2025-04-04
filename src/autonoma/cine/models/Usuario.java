@@ -27,4 +27,8 @@ public abstract class Usuario {
     * Metodo que debe ser implemnetado por las subclases para definir su decuento.
     */
     public abstract double calcularPorcentajeDescuento();
+
+    String getnombre() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
