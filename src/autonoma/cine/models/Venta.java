@@ -14,29 +14,36 @@ public class Venta {
     /*
     * contiene un ArrayList de boleta
     */
-    private ArrayList<Boleta>bolateas;
+    private ArrayList<Boleta>boletas;
     /*
     * constructor
     */
     public Venta(ArrayList<Boleta> bolateas) {
-        this.bolateas = bolateas;
+        this.boletas = bolateas;
     }
     /*
     * metodos de acepso
     */
 
-    public ArrayList<Boleta> getBolateas() {
-        return bolateas;
+    public ArrayList<Boleta> getBoletas() {
+        return boletas;
     }
 
-    public void setBolateas(ArrayList<Boleta> bolateas) {
-        this.bolateas = bolateas;
+    public void setBoletas(ArrayList<Boleta> boletas) {
+        this.boletas = boletas;
     }
     /*
     * metodo agrgar boleta
     */
-    private void agregarBoleta(Boleta b){
-        
+    public void agregarBoleta(Boleta b){
+        boletas.add(b);
+    }
+    public double calcularTotal(){
+        double total=0;
+        for (int i=0; i<boletas.size(); i++){
+            total+=boletas.get(i).getPrecioFinal();
+        }
+        return total;
     }
     
 }
