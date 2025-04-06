@@ -30,6 +30,8 @@ public class Factura {
         this.totalFactura = venta.calcularTotal();
     }
 
+
+
     public Venta getVenta() {
         return venta;
     }
@@ -37,11 +39,13 @@ public class Factura {
     public void setVenta(Venta venta) {
         this.venta = venta;
         this.totalFactura = venta.calcularTotal(); 
+
     }
 
     public double getTotal() {
         return totalFactura;
     }
+
 
     public void setTotal(double total) {
         this.totalFactura = total;
@@ -52,6 +56,8 @@ public class Factura {
      * 
      * @return Información de la factura en formato texto.
      */
+
+
     @Override
     public String toString() {
         return "Factura\n" +

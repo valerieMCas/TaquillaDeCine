@@ -22,6 +22,12 @@ public abstract class Usuario {
         this.descuento = 0;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    
+    
     /**
      * Obtiene el valor del descuento aplicado al usuario.
      * Este valor representa una cantidad fija en dinero que se descontará 
@@ -35,9 +41,11 @@ public abstract class Usuario {
     
     
     
+    
     /**
     * Metodo abstracto que calcula el porcentaje de descuento aplicado al usuario.
     * Metodo que debe ser implemnetado por las subclases para definir su decuento.
     */
     public abstract double calcularPorcentajeDescuento();
+
 }
