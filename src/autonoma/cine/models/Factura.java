@@ -1,50 +1,61 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package autonoma.cine.models;
 
-import java.util.ArrayList;
-
 /**
- * Reoresentar la factura del cine
- * contiene un ArrayList de venta
- * @author valerie moreno
- * @since 4042025
+ * Representa una factura generada por una venta de boletería.
+ * Cada factura está asociada a una única venta y contiene el total pagado.
+ * 
+ * @author Valerie Moreno
+ * @since 2025-04-04
  * @version 1.0
- *
  */
 public class Factura {
+    
     /**
-     * Lista de ventas de poleteria.
+     * Venta asociada a esta factura.
      */
-    private ArrayList<Venta>ventas;
+    private Venta venta;
 
-    private double total;
-    Venta venta;
-    public Factura(ArrayList<Venta> ventas, double total) {
-        this.ventas = ventas;
-        this.total = total;
+    /**
+     * Total a pagar por la venta.
+     */
+    private double totalFactura;
+
+    /**
+     * Constructor que crea una factura con una venta específica.
+     * 
+     * @param venta La venta asociada a la factura.
+     */
+    public Factura(Venta venta) {
+        this.venta = venta;
+        this.totalFactura = venta.calcularTotal();
     }
 
-    public ArrayList<Venta> getVentas() {
-        return ventas;
+    public Venta getVenta() {
+        return venta;
     }
 
-    public void setVentas(ArrayList<Venta> ventas) {
-        this.ventas = ventas;
+    public void setVenta(Venta venta) {
+        this.venta = venta;
+        this.totalFactura = venta.calcularTotal(); 
     }
 
     public double getTotal() {
-        return total;
+        return totalFactura;
     }
 
     public void setTotal(double total) {
-        this.total = total;
+        this.totalFactura = total;
     }
+
+    /**
+     * Devuelve una representación en texto de la factura.
+     * 
+     * @return Información de la factura en formato texto.
+     */
+    @Override
     public String toString() {
-        return "Factura\n" + 
-               "Número de boletos: " + venta.getBoletas().size() + "\n" + 
-               "Total: $" + total;
+        return "Factura\n" +
+               "Número de boletas: " + venta.getBoletas().size() + "\n" +
+               "Total: $" + totalFactura;
     }
 }

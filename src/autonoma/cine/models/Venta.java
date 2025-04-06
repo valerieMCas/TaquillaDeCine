@@ -45,5 +45,8 @@ public class Venta {
         }
         return total;
     }
-    
+    @Override  
+    public String toString() {
+        return "Venta con " + boletas.size() + " boletas. Total: $" + calcularTotal();
+    }
 }

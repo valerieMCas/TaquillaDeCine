@@ -23,6 +23,20 @@ public abstract class Funcion {
     }
 
     /**
+     * Obtiene el porcentaje de descuento aplicado a la función.
+     * Este descuento se utiliza para calcular el precio final de la boleta
+     * y representa un valor porcentual
+     * 
+     * @return El porcentaje de descuento como un valor flotante.
+     */
+    public float getPorcentajeDescuento() {
+        return porcentajeDescuento;
+    }
+
+
+    
+    
+    /**
      * Crea una nueva función para una película específica.
      * 
      * @param pelicula La película que se proyectará en esta función.

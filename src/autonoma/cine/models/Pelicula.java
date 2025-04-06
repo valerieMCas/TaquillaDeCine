@@ -84,7 +84,8 @@ public class Pelicula {
         return funciones;
     }
     
-        /**
+    
+    /**
      * Agrega una nueva función a la lista de funciones de la película.
      * @param funcion La función que se desea agregar.
      * @throws IllegalArgumentException si la función es nula.

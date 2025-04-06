@@ -67,21 +67,21 @@ public class Boleta {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
-    public double calcularPrecio (Funcion f){
+    public double calcularPrecio () throws PrecioMenorACero{
         double precioBase = pelicula.getCostoBase();
-        double descuentoFuncion = funcion.porcentajeDescuento;
-        double descuentoCalculado = (precioBase*descuentoFuncion)/100;
-        double descuentoUsuario = precioBase-usuario.descuento;
-        precioFinal = precioBase-(descuentoUsuario + descuentoFuncion);
-        try{
-            if(precioFinal>0){
+        double descuentoFuncion=  (precioBase * funcion.getPorcentajeDescuento()) / 100;
+        double descuentoUsuario = usuario.getDescuento();
+        
+        precioFinal = precioBase - descuentoUsuario - descuentoFuncion;
+        
+        
+            if(precioFinal<=0){
                 throw new PrecioMenorACero();
             }
-        }catch(PrecioMenorACero e){
-            System.out.println(e.getMessage());
-        }
+     
         return precioFinal;
     }
+    @Override
     public String toString() {
         return "Boleta para la pelicula " +pelicula.getNombre() +"Con un total de "+ this.precioFinal;
     }

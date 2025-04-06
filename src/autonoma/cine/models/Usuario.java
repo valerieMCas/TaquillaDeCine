@@ -21,6 +21,19 @@ public abstract class Usuario {
         this.nombre = "";
         this.descuento = 0;
     }
+
+    /**
+     * Obtiene el valor del descuento aplicado al usuario.
+     * Este valor representa una cantidad fija en dinero que se descontará 
+     * del precio base de la boleta al momento de calcular el precio final.
+     * 
+     * @return El descuento del usuario como un valor en pesos.
+     */
+    public double getDescuento() {
+        return descuento;
+    }
+    
+    
     
     /**
     * Metodo abstracto que calcula el porcentaje de descuento aplicado al usuario.
